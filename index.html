@@ -7,96 +7,95 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Arial', sans-serif;
       background-color: #000;
       color: #fff;
       scroll-behavior: smooth;
     }
 
     header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.85);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      z-index: 1000;
+      background-color: #111;
+      padding: 2rem;
+      text-align: center;
     }
 
-    header h1 {
+    h1 {
       color: #d4af37;
-      font-size: 1.5rem;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    nav {
+      background-color: #000;
+      padding: 1rem;
+      text-align: center;
     }
 
     nav a {
-      color: #d4af37;
-      text-decoration: none;
+      color: #fff;
       margin: 0 1rem;
-      transition: color 0.3s;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #fff;
+      color: #d4af37;
     }
 
     section {
-      padding: 6rem 2rem 4rem;
+      padding: 2rem;
       max-width: 900px;
       margin: auto;
+      animation: fadeIn 1s ease-in-out;
     }
 
     h2 {
       color: #d4af37;
-      font-size: 2rem;
       margin-bottom: 1rem;
-      animation: fadeIn 1s ease-in;
     }
 
-    .formation, .faq, .testimonial {
+    .formation, .temoignage, .faq-item {
       background: #111;
       border: 1px solid #333;
       padding: 1rem;
       margin-bottom: 1.5rem;
-      border-radius: 8px;
-      transition: transform 0.3s;
-    }
-
-    .formation:hover, .faq:hover, .testimonial:hover {
-      transform: scale(1.02);
+      border-radius: 5px;
     }
 
     .btn {
+      display: inline-block;
       background: #d4af37;
       color: #000;
       padding: 0.5rem 1rem;
       text-decoration: none;
-      border-radius: 4px;
-      display: inline-block;
+      border-radius: 3px;
       margin-top: 0.5rem;
-      transition: background 0.3s;
+      transition: background 0.3s ease;
     }
 
     .btn:hover {
       background: #b9972c;
     }
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #111;
-      color: #777;
+    form {
+      display: flex;
+      flex-direction: column;
     }
 
     form input, form textarea {
-      width: 100%;
-      padding: 0.7rem;
+      padding: 0.5rem;
       margin-bottom: 1rem;
-      border: 1px solid #444;
-      border-radius: 5px;
-      background-color: #222;
-      color: white;
+      border: none;
+      border-radius: 3px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #111;
+      color: #777;
+      margin-top: 2rem;
     }
 
     @keyframes fadeIn {
@@ -106,90 +105,34 @@
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>Formations CAO/DAO</h1>
-    <nav>
-      <a href="#accueil">Accueil</a>
-      <a href="#apropos">À propos</a>
-      <a href="#programme">Programme</a>
-      <a href="#temoignages">Témoignages</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header id="accueil">
+    <h1>Formations DAO & CAO</h1>
+    <p>Ingénieur formateur en AutoCAD, SketchUp et Robot Structural</p>
   </header>
 
-  <section id="accueil">
-    <h2>Bienvenue</h2>
-    <p>Ingénieur formateur en AutoCAD, SketchUp et Robot Structural Analysis. Découvrez mes formations professionnelles adaptées à vos besoins.</p>
-  </section>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#apropos">À propos</a>
+    <a href="#programme">Programme</a>
+    <a href="#temoignages">Témoignages</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <section id="apropos">
     <h2>À propos</h2>
-    <p>Je suis un ingénieur passionné par la transmission des compétences techniques. Mon objectif est de rendre les outils comme AutoCAD, SketchUp et Robot Structural accessibles à tous ceux qui souhaitent évoluer dans le domaine du bâtiment et de l’ingénierie.</p>
+    <p>Je suis ingénieur passionné par le dessin assisté par ordinateur et la modélisation 3D. Mon objectif est de transmettre mes compétences à travers des formations simples, pratiques et accessibles.</p>
   </section>
 
   <section id="programme">
-    <h2>Programme de formation</h2>
+    <h2>Programme de Formation</h2>
     <div class="formation">
-      <h3>AutoCAD - Initiation</h3>
-      <p>Maîtrisez les plans 2D professionnels.</p>
-      <a href="https://wa.me/243976416666?text=Bonjour,%20je%20veux%20m'inscrire%20à%20la%20formation%20AutoCAD" class="btn" target="_blank">S'inscrire</a>
+      <h3>🔹 AutoCAD - Initiation</h3>
+      <p>Apprenez à dessiner un plan 2D professionnel.</p>
     </div>
-
     <div class="formation">
-      <h3>SketchUp - Modélisation 3D</h3>
-      <p>Créez des modèles 3D de vos projets en toute simplicité.</p>
-      <a href="https://wa.me/243976416666?text=Bonjour,%20je%20veux%20m'inscrire%20à%20la%20formation%20SketchUp" class="btn" target="_blank">S'inscrire</a>
+      <h3>🔹 SketchUp - Modélisation 3D</h3>
+      <p>Initiez-vous à la modélisation 3D simple et rapide.</p>
     </div>
-
     <div class="formation">
-      <h3>Robot Structural Analysis</h3>
-      <p>Analysez la structure des bâtiments en béton armé.</p>
-      <a href="https://wa.me/243976416666?text=Bonjour,%20je%20veux%20m'inscrire%20à%20la%20formation%20Robot%20Structural" class="btn" target="_blank">S'inscrire</a>
-    </div>
-  </section>
-
-  <section id="temoignages">
-    <h2>Témoignages</h2>
-    <div class="testimonial">
-      <p>“Une formation très claire et structurée. J’ai pu réaliser mes premiers plans AutoCAD en 1 semaine !” — Jacques, Kinshasa</p>
-    </div>
-    <div class="testimonial">
-      <p>“Le formateur explique avec patience. SketchUp est devenu mon outil préféré.” — Mireille, Lubumbashi</p>
-    </div>
-  </section>
-
-  <section id="faq">
-    <h2>FAQ</h2>
-    <div class="faq">
-      <strong>🟡 Les formations sont-elles en ligne ou en présentiel ?</strong>
-      <p>Les deux options sont possibles selon votre localisation.</p>
-    </div>
-    <div class="faq">
-      <strong>🟡 Faut-il avoir un ordinateur puissant ?</strong>
-      <p>Un ordinateur avec au moins 4 Go de RAM est recommandé.</p>
-    </div>
-    <div class="faq">
-      <strong>🟡 Peut-on payer par mobile money ?</strong>
-      <p>Oui, Airtel Money, M-Pesa et Orange Money sont acceptés.</p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Remplissez ce formulaire pour être recontacté :</p>
-    <form action="https://formspree.io/f/mzzgonoe" method="POST">
-      <input type="text" name="Nom" placeholder="Votre nom" required>
-      <input type="email" name="Email" placeholder="Votre email" required>
-      <textarea name="Message" rows="5" placeholder="Votre message" required></textarea>
-      <button type="submit" class="btn">Envoyer</button>
-    </form>
-  </section>
-
-  <footer>
-    &copy; 2025 | Formations CAO/DAO | WhatsApp : +243 976 416 666
-  </footer>
-
-</body>
-</html>
+      <h3>🔹 Robot Structural Analysis</h3>
