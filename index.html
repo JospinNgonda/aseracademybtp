@@ -11,12 +11,36 @@
       background-color: #000;
       color: #fff;
     }
+
+    nav {
+      background-color: #111;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+    nav a {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     header {
       padding: 2rem;
       text-align: center;
     }
     h1 {
-      color: #d4af37; /* doré */
+      color: #d4af37;
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
     }
@@ -59,6 +83,15 @@
   </style>
 </head>
 <body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
   <header>
     <h1>Formations DAO & CAO</h1>
     <p>Ingénieur formateur en AutoCAD, SketchUp et Robot Structural</p>
@@ -86,10 +119,8 @@
     </div>
   </section>
 
-  <p><a href="contact.html" style="color:#d4af37;">Contact</a></p>
-<p><a href="apropos.html" style="color:#d4af37;">À propos du formateur</a></p>
   <footer>
-    Contact : jospinngonda243@gmail.com | WhatsApp : +243 976 416 666
+    Contact : ton.email@example.com | WhatsApp : +243 976 416 666
   </footer>
 </body>
 </html>
