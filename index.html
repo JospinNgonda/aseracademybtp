@@ -7,108 +7,189 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #000;
       color: #fff;
+      scroll-behavior: smooth;
     }
+
     header {
-      padding: 2rem;
-      text-align: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 1000;
     }
-    h1 {
+
+    header h1 {
       color: #d4af37;
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
     }
-    .section {
-      padding: 2rem;
+
+    nav a {
+      color: #d4af37;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    section {
+      padding: 6rem 2rem 4rem;
       max-width: 900px;
       margin: auto;
     }
+
     h2 {
       color: #d4af37;
+      font-size: 2rem;
       margin-bottom: 1rem;
+      animation: fadeIn 1s ease-in;
     }
-    .formation {
+
+    .formation, .faq, .testimonial {
       background: #111;
       border: 1px solid #333;
       padding: 1rem;
       margin-bottom: 1.5rem;
-      border-radius: 5px;
+      border-radius: 8px;
+      transition: transform 0.3s;
     }
+
+    .formation:hover, .faq:hover, .testimonial:hover {
+      transform: scale(1.02);
+    }
+
     .btn {
-      display: inline-block;
       background: #d4af37;
       color: #000;
       padding: 0.5rem 1rem;
       text-decoration: none;
-      border-radius: 3px;
+      border-radius: 4px;
+      display: inline-block;
       margin-top: 0.5rem;
-      transition: background 0.3s ease;
-      border: none;
-      cursor: pointer;
+      transition: background 0.3s;
     }
+
     .btn:hover {
       background: #b9972c;
     }
+
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 2rem;
       background-color: #111;
       color: #777;
-      margin-top: 2rem;
     }
+
     form input, form textarea {
       width: 100%;
-      padding: 0.5rem;
+      padding: 0.7rem;
       margin-bottom: 1rem;
+      border: 1px solid #444;
       border-radius: 5px;
-      border: none;
+      background-color: #222;
+      color: white;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Formations DAO & CAO</h1>
-    <p>Ingénieur formateur en AutoCAD, SketchUp et Robot Structural</p>
+    <h1>Formations CAO/DAO</h1>
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#apropos">À propos</a>
+      <a href="#programme">Programme</a>
+      <a href="#temoignages">Témoignages</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section class="section">
-    <h2>Mes Cours</h2>
+  <section id="accueil">
+    <h2>Bienvenue</h2>
+    <p>Ingénieur formateur en AutoCAD, SketchUp et Robot Structural Analysis. Découvrez mes formations professionnelles adaptées à vos besoins.</p>
+  </section>
 
+  <section id="apropos">
+    <h2>À propos</h2>
+    <p>Je suis un ingénieur passionné par la transmission des compétences techniques. Mon objectif est de rendre les outils comme AutoCAD, SketchUp et Robot Structural accessibles à tous ceux qui souhaitent évoluer dans le domaine du bâtiment et de l’ingénierie.</p>
+  </section>
+
+  <section id="programme">
+    <h2>Programme de formation</h2>
     <div class="formation">
-      <h3>🔹 AutoCAD - Initiation</h3>
-      <p>Apprenez à dessiner un plan 2D professionnel.</p>
-      <a href="https://wa.me/243976416666?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20formation%20AutoCAD" class="btn" target="_blank">S'inscrire</a>
+      <h3>AutoCAD - Initiation</h3>
+      <p>Maîtrisez les plans 2D professionnels.</p>
+      <a href="https://wa.me/243976416666?text=Bonjour,%20je%20veux%20m'inscrire%20à%20la%20formation%20AutoCAD" class="btn" target="_blank">S'inscrire</a>
     </div>
 
     <div class="formation">
-      <h3>🔹 SketchUp - Modélisation 3D</h3>
-      <p>Initiez-vous à la modélisation 3D simple et rapide.</p>
-      <a href="https://wa.me/243976416666?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20formation%20SketchUp" class="btn" target="_blank">S'inscrire</a>
+      <h3>SketchUp - Modélisation 3D</h3>
+      <p>Créez des modèles 3D de vos projets en toute simplicité.</p>
+      <a href="https://wa.me/243976416666?text=Bonjour,%20je%20veux%20m'inscrire%20à%20la%20formation%20SketchUp" class="btn" target="_blank">S'inscrire</a>
     </div>
 
     <div class="formation">
-      <h3>🔹 Robot Structural Analysis</h3>
-      <p>Analyse structurelle pour bâtiments en béton armé.</p>
-      <a href="https://wa.me/243976416666?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20formation%20Robot%20Structural" class="btn" target="_blank">S'inscrire</a>
+      <h3>Robot Structural Analysis</h3>
+      <p>Analysez la structure des bâtiments en béton armé.</p>
+      <a href="https://wa.me/243976416666?text=Bonjour,%20je%20veux%20m'inscrire%20à%20la%20formation%20Robot%20Structural" class="btn" target="_blank">S'inscrire</a>
     </div>
   </section>
 
-  <section class="section" id="contact">
-    <h2>Contact</h2>
-    <p>Laisse-moi un message directement via ce formulaire :</p>
+  <section id="temoignages">
+    <h2>Témoignages</h2>
+    <div class="testimonial">
+      <p>“Une formation très claire et structurée. J’ai pu réaliser mes premiers plans AutoCAD en 1 semaine !” — Jacques, Kinshasa</p>
+    </div>
+    <div class="testimonial">
+      <p>“Le formateur explique avec patience. SketchUp est devenu mon outil préféré.” — Mireille, Lubumbashi</p>
+    </div>
+  </section>
 
+  <section id="faq">
+    <h2>FAQ</h2>
+    <div class="faq">
+      <strong>🟡 Les formations sont-elles en ligne ou en présentiel ?</strong>
+      <p>Les deux options sont possibles selon votre localisation.</p>
+    </div>
+    <div class="faq">
+      <strong>🟡 Faut-il avoir un ordinateur puissant ?</strong>
+      <p>Un ordinateur avec au moins 4 Go de RAM est recommandé.</p>
+    </div>
+    <div class="faq">
+      <strong>🟡 Peut-on payer par mobile money ?</strong>
+      <p>Oui, Airtel Money, M-Pesa et Orange Money sont acceptés.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Remplissez ce formulaire pour être recontacté :</p>
     <form action="https://formspree.io/f/mzzgonoe" method="POST">
-      <input type="text" name="name" placeholder="Votre nom" required />
-      <input type="email" name="email" placeholder="Votre email" required />
-      <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+      <input type="text" name="Nom" placeholder="Votre nom" required>
+      <input type="email" name="Email" placeholder="Votre email" required>
+      <textarea name="Message" rows="5" placeholder="Votre message" required></textarea>
       <button type="submit" class="btn">Envoyer</button>
     </form>
   </section>
 
   <footer>
-    Contact : ton.email@example.com | WhatsApp : +243 976 416 666
+    &copy; 2025 | Formations CAO/DAO | WhatsApp : +243 976 416 666
   </footer>
+
 </body>
 </html>
