@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Programme - Aser Academy</title>
+  <style>
+    body {
+      margin: 0; font-family: Arial, sans-serif; background: #000; color: #fff; line-height: 1.6;
+    }
+    header, footer {
+      background: #111; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 2px 5px rgba(212,175,55,0.3);
+      position: sticky; top: 0; z-index: 1000;
+    }
+    header img { height: 50px; }
+    nav a {
+      margin-left: 1.5rem; font-weight: bold; font-size: 1rem; color: #d4af37; text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    nav a:hover { color: #b9972c; }
+    main {
+      max-width: 900px; margin: 2rem auto; padding: 0 1rem; animation: fadeIn 1s ease forwards;
+    }
+    h1, h2 {
+      color: #d4af37; margin-bottom: 1rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      background: #111;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 6px;
+      box-shadow: 0 0 8px rgba(212,175,55,0.2);
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" aria-label="Accueil"><img src="logo.svg" alt="Logo Aser Academy" /></a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="programme.html">Programme</a>
+      <a href="temoignages.html">Témoignages</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Programme des formations</h1>
+    <ul>
+      <li>
+        <h2>AutoCAD - Initiation</h2>
+        <p>Introduction aux outils 2D, dessin, cotations, calques et impressions.</p>
+      </li>
+      <li>
+        <h2>SketchUp - Modélisation 3D</h2>
+        <p>Modélisation, textures, scènes et exportation.</p>
+      </li>
+      <li>
+        <h2>Robot Structural Analysis</h2>
+        <p>Modélisation structurelle, chargements, analyse et résultats.</p>
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    Contact : <a href="mailto:ton.email@example.com">ton.email@example.com</a> | WhatsApp : <a href="https://wa.me/243976416666" target="_blank" rel="noopener noreferrer">+243 976 416 666</a>
+  </footer>
+</body>
+</html>
