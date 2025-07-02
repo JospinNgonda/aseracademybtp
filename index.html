@@ -5,260 +5,153 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aser Academy - Formations DAO & CAO</title>
   <style>
-    /* Reset et base */
-    * {
-      box-sizing: border-box;
-    }
+    /* Reset et styles de base */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #000;
       color: #fff;
-      scroll-behavior: smooth;
+      line-height: 1.6;
     }
     a {
       color: #d4af37;
       text-decoration: none;
     }
     a:hover {
-      text-decoration: underline;
+      color: #b9972c;
     }
 
-    /* Header / nav */
+    /* Header avec logo et nav */
     header {
       background-color: #111;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 2px solid #d4af37;
+      padding: 0.75rem 2rem;
+      box-shadow: 0 2px 5px rgba(212,175,55,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    .logo {
-      font-weight: 900;
-      font-size: 1.7rem;
-      color: #d4af37;
-      user-select: none;
-      font-family: 'Georgia', serif;
-      letter-spacing: 0.1em;
-      cursor: default;
+    header img {
+      height: 50px;
     }
     nav a {
       margin-left: 1.5rem;
-      font-weight: 600;
-      cursor: pointer;
+      font-weight: bold;
       font-size: 1rem;
+      transition: color 0.3s ease;
     }
 
-    /* Sections */
-    section {
+    /* Container principal */
+    main {
       max-width: 900px;
-      margin: 3rem auto;
+      margin: 2rem auto;
       padding: 0 1rem;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
+      animation: fadeIn 1s ease forwards;
     }
 
-    h1, h2, h3 {
+    /* Titres */
+    h1, h2 {
       color: #d4af37;
+      margin-bottom: 1rem;
     }
     h1 {
-      font-size: 2.8rem;
-      text-align: center;
-      margin-bottom: 0.5rem;
-      user-select: none;
+      font-size: 2.5rem;
     }
     h2 {
       font-size: 2rem;
-      margin-bottom: 1rem;
       border-bottom: 2px solid #d4af37;
-      padding-bottom: 0.5rem;
-    }
-    h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.3rem;
+      padding-bottom: 0.3rem;
     }
 
-    /* Formations */
-    .formation {
-      background: #111;
-      border: 1px solid #333;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border-radius: 5px;
-    }
+    /* Boutons */
     .btn {
       display: inline-block;
       background: #d4af37;
       color: #000;
       padding: 0.5rem 1rem;
-      text-decoration: none;
-      border-radius: 3px;
-      margin-top: 0.5rem;
+      border-radius: 4px;
+      margin-top: 1rem;
+      font-weight: bold;
       transition: background 0.3s ease;
     }
     .btn:hover {
       background: #b9972c;
     }
 
-    /* Contact form */
-    form {
-      max-width: 600px;
-      margin: auto;
+    /* Formations (exemple sur index page) */
+    .formation {
       background: #111;
-      padding: 1.5rem;
-      border-radius: 8px;
-      border: 1px solid #333;
-      color: #fff;
-    }
-    label {
-      display: block;
-      margin-bottom: 0.5rem;
-      color: #d4af37;
-      font-weight: bold;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 0.6rem;
-      margin-bottom: 1.2rem;
-      border-radius: 4px;
-      border: none;
-      resize: vertical;
-      font-size: 1rem;
-      background: #222;
-      color: #fff;
-    }
-    input::placeholder, textarea::placeholder {
-      color: #999;
-    }
-    input[type="submit"] {
-      background-color: #d4af37;
-      color: #000;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-    input[type="submit"]:hover {
-      background-color: #b9972c;
-    }
-
-    /* FAQ */
-    .faq-item {
-      background: #111;
-      border: 1px solid #333;
-      border-radius: 6px;
-      margin-bottom: 1rem;
-      padding: 1rem;
-      cursor: pointer;
-      user-select: none;
-    }
-    .faq-question {
-      font-weight: bold;
-      color: #d4af37;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .faq-answer {
-      margin-top: 0.8rem;
-      display: none;
-      color: #ddd;
-    }
-    .faq-item.active .faq-answer {
-      display: block;
-    }
-
-    /* Testimonials */
-    .testimonial {
-      background: #111;
-      border: 1px solid #333;
-      border-radius: 6px;
       padding: 1rem;
       margin-bottom: 1.5rem;
-      font-style: italic;
-      color: #ddd;
+      border-radius: 6px;
+      box-shadow: 0 0 8px rgba(212,175,55,0.2);
+      transition: transform 0.3s ease;
     }
-    .testimonial-author {
-      margin-top: 0.8rem;
-      text-align: right;
-      font-weight: bold;
-      color: #d4af37;
+    .formation:hover {
+      transform: translateY(-5px);
     }
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      nav a {
-        margin-left: 1rem;
-        font-size: 0.9rem;
-      }
-      h1 {
-        font-size: 2rem;
-      }
-      section {
-        margin: 2rem 1rem;
-      }
+    /* Footer */
+    footer {
+      background-color: #111;
+      color: #777;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
     }
   </style>
 </head>
 <body>
+  <header>
+    <a href="index.html" aria-label="Accueil">
+      <img src="logo.svg" alt="Logo Aser Academy" />
+    </a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="programme.html">Programme</a>
+      <a href="temoignages.html">Témoignages</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<header>
-  <div class="logo">Aser Academy</div>
-  <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#a-propos">À propos</a>
-    <a href="#programme">Programme</a>
-    <a href="#temoignages">Témoignages</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <main>
+    <h1>Bienvenue chez Aser Academy</h1>
+    <p>Ingénieur formateur en AutoCAD, SketchUp et Robot Structural. Découvrez nos formations et améliorez vos compétences DAO & CAO.</p>
 
-<main>
+    <section>
+      <h2>Nos Cours</h2>
+      <div class="formation">
+        <h3>AutoCAD - Initiation</h3>
+        <p>Apprenez à dessiner un plan 2D professionnel.</p>
+        <a href="https://wa.me/243976416666?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20formation%20AutoCAD" class="btn" target="_blank" rel="noopener noreferrer">S'inscrire</a>
+      </div>
+      <div class="formation">
+        <h3>SketchUp - Modélisation 3D</h3>
+        <p>Initiez-vous à la modélisation 3D simple et rapide.</p>
+        <a href="https://wa.me/243976416666?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20formation%20SketchUp" class="btn" target="_blank" rel="noopener noreferrer">S'inscrire</a>
+      </div>
+      <div class="formation">
+        <h3>Robot Structural Analysis</h3>
+        <p>Analyse structurelle pour bâtiments en béton armé.</p>
+        <a href="https://wa.me/243976416666?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20formation%20Robot%20Structural" class="btn" target="_blank" rel="noopener noreferrer">S'inscrire</a>
+      </div>
+    </section>
+  </main>
 
-  <section id="accueil" class="visible">
-    <h1>Formations DAO & CAO</h1>
-    <p style="text-align:center; max-width:600px; margin:auto;">
-      Ingénieur formateur en AutoCAD, SketchUp et Robot Structural Analysis.
-    </p>
-    <div style="text-align:center; margin-top:2rem;">
-      <a href="https://wa.me/243976416666?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20formation%20AutoCAD" class="btn" target="_blank" rel="noopener noreferrer">Inscription AutoCAD</a>
-      <a href="https://wa.me/243976416666?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20formation%20SketchUp" class="btn" target="_blank" rel="noopener noreferrer" style="margin-left:1rem;">Inscription SketchUp</a>
-      <a href="https://wa.me/243976416666?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20formation%20Robot%20Structural" class="btn" target="_blank" rel="noopener noreferrer" style="margin-left:1rem;">Inscription Robot Structural</a>
-    </div>
-  </section>
-
-  <section id="a-propos">
-    <h2>À propos</h2>
-    <p>
-      Aser Academy est dédié à la formation professionnelle en DAO & CAO pour ingénieurs, architectes et techniciens.
-      Nos formations sont adaptées aux débutants comme aux utilisateurs avancés, avec un focus pratique et des cas concrets.
-    </p>
-  </section>
-
-  <section id="programme">
-    <h2>Programme</h2>
-    <ul>
-      <li><strong>AutoCAD - Initiation :</strong> Dessiner des plans 2D professionnels.</li>
-      <li><strong>SketchUp - Modélisation 3D :</strong> Modéliser rapidement des objets et bâtiments.</li>
-      <li><strong>Robot Structural Analysis :</strong> Analyse structurelle des constructions en béton armé.</li>
-    </ul>
-  </section>
-
-  <section id="temoignages">
-    <h2>Témoignages</h2>
-    <div class="testimonial">
-      « Les cours d'Aser Academy m'ont permis de maîtriser AutoCAD rapidement. »
-      <div class="testimonial-author">— Jean M.</div>
-    </div>
-    <div class="testimonial">
-      « Excellente pédagogie et exemples concrets. Je recommande vivement ! »
-      <div class="testimonial-author
+  <footer>
+    Contact : <a href="mailto:ton.email@example.com">ton.email@example.com</a> | WhatsApp : <a href="https://wa.me/243976416666" target="_blank" rel="noopener noreferrer">+243 976 416 666</a>
+  </footer>
+</body>
+</html>
