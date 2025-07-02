@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>À propos</title>
+  <title>À propos - Formations DAO & CAO</title>
   <style>
     body {
       margin: 0;
@@ -11,37 +11,63 @@
       background-color: #000;
       color: #fff;
     }
-    header {
-      padding: 2rem;
+    nav {
+      background-color: #111;
+      padding: 1rem;
       text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+    nav a {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
     }
     h1 {
       color: #d4af37;
-      font-size: 2.5rem;
     }
-    .content {
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-    }
-    a {
-      color: #d4af37;
-      text-decoration: none;
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #111;
+      color: #777;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-  <header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="section">
     <h1>À propos</h1>
-    <p><a href="index.html">← Retour à l'accueil</a></p>
-  </header>
+    <p>Je suis ingénieur passionné par la transmission du savoir dans les domaines de la DAO (Dessin Assisté par Ordinateur) et de la CAO (Conception Assistée par Ordinateur).</p>
+    <p>Je propose des formations pratiques et accessibles sur des logiciels comme AutoCAD, SketchUp et Robot Structural Analysis, pour étudiants, architectes, ingénieurs et passionnés de construction.</p>
+  </section>
 
-  <div class="content">
-    <p>Je suis ingénieur et formateur en logiciels techniques comme AutoCAD, SketchUp et Robot Structural Analysis. Ma mission est d'aider les jeunes à maîtriser ces outils pour réussir dans le monde professionnel.</p>
-
-    <p>Grâce à ces formations, vous pourrez produire des plans professionnels, modéliser des projets 3D et analyser des structures en béton armé.</p>
-
-    <p>Contactez-moi sur WhatsApp au <strong>+243 976 416 666</strong> pour plus d'informations.</p>
-  </div>
+  <footer>
+    Contact : ton.email@example.com | WhatsApp : +243 976 416 666
+  </footer>
 </body>
 </html>
