@@ -10,7 +10,6 @@
       font-family: Arial, sans-serif;
       background-color: #000;
       color: #fff;
-      scroll-behavior: smooth;
     }
     header {
       padding: 2rem;
@@ -25,13 +24,6 @@
       padding: 2rem;
       max-width: 900px;
       margin: auto;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .visible {
-      opacity: 1;
-      transform: translateY(0);
     }
     h2 {
       color: #d4af37;
@@ -53,6 +45,8 @@
       border-radius: 3px;
       margin-top: 0.5rem;
       transition: background 0.3s ease;
+      border: none;
+      cursor: pointer;
     }
     .btn:hover {
       background: #b9972c;
@@ -64,10 +58,12 @@
       color: #777;
       margin-top: 2rem;
     }
-    iframe {
-      border: none;
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
       border-radius: 5px;
-      background-color: #fff;
+      border: none;
     }
   </style>
 </head>
@@ -83,57 +79,36 @@
     <div class="formation">
       <h3>🔹 AutoCAD - Initiation</h3>
       <p>Apprenez à dessiner un plan 2D professionnel.</p>
-      <a href="https://wa.me/243976416666?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20formation%20AutoCAD" class="btn" target="_blank" rel="noopener noreferrer">S'inscrire</a>
+      <a href="https://wa.me/243976416666?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20formation%20AutoCAD" class="btn" target="_blank">S'inscrire</a>
     </div>
 
     <div class="formation">
       <h3>🔹 SketchUp - Modélisation 3D</h3>
       <p>Initiez-vous à la modélisation 3D simple et rapide.</p>
-      <a href="https://wa.me/243976416666?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20formation%20SketchUp" class="btn" target="_blank" rel="noopener noreferrer">S'inscrire</a>
+      <a href="https://wa.me/243976416666?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20formation%20SketchUp" class="btn" target="_blank">S'inscrire</a>
     </div>
 
     <div class="formation">
       <h3>🔹 Robot Structural Analysis</h3>
       <p>Analyse structurelle pour bâtiments en béton armé.</p>
-      <a href="https://wa.me/243976416666?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20formation%20Robot%20Structural" class="btn" target="_blank" rel="noopener noreferrer">S'inscrire</a>
+      <a href="https://wa.me/243976416666?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20formation%20Robot%20Structural" class="btn" target="_blank">S'inscrire</a>
     </div>
   </section>
 
-  <section id="contact" class="section">
+  <section class="section" id="contact">
     <h2>Contact</h2>
-    <p>Remplissez le formulaire ci-dessous et je vous répondrai rapidement :</p>
+    <p>Laisse-moi un message directement via ce formulaire :</p>
 
-    <div style="margin-top: 1rem;">
-      <iframe 
-        src="https://docs.google.com/forms/d/e/1FAIpQLSeg2YrqP1l156gtvZCrAG5AUOr68ySGGADRE86vJM6OqBVlNQ/viewform?embedded=true" 
-        width="100%" 
-        height="700" 
-        frameborder="0" 
-        marginheight="0" 
-        marginwidth="0">
-        Chargement…
-      </iframe>
-    </div>
+    <form action="https://formspree.io/f/mzzgonoe" method="POST">
+      <input type="text" name="name" placeholder="Votre nom" required />
+      <input type="email" name="email" placeholder="Votre email" required />
+      <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+      <button type="submit" class="btn">Envoyer</button>
+    </form>
   </section>
 
   <footer>
     Contact : ton.email@example.com | WhatsApp : +243 976 416 666
   </footer>
-
-  <script>
-    // Animation légère quand on scrolle
-    const sections = document.querySelectorAll('.section');
-    const showSection = () => {
-      const trigger = window.innerHeight * 0.85;
-      sections.forEach(section => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top < trigger) {
-          section.classList.add('visible');
-        }
-      });
-    };
-    window.addEventListener('scroll', showSection);
-    window.addEventListener('load', showSection);
-  </script>
 </body>
 </html>
