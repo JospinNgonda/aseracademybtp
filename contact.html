@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact</title>
+  <title>Contact - Formations DAO & CAO</title>
   <style>
     body {
       margin: 0;
@@ -11,67 +11,89 @@
       background-color: #000;
       color: #fff;
     }
-    header {
-      padding: 2rem;
+    nav {
+      background-color: #111;
+      padding: 1rem;
       text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+    nav a {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
     }
     h1 {
       color: #d4af37;
     }
-    form {
-      max-width: 600px;
-      margin: auto;
-      padding: 2rem;
-      background-color: #111;
-      border: 1px solid #333;
-      border-radius: 8px;
-    }
-    label {
-      display: block;
-      margin: 1rem 0 0.5rem;
-    }
     input, textarea {
       width: 100%;
-      padding: 0.5rem;
+      padding: 0.7rem;
+      margin: 0.5rem 0;
       border: none;
       border-radius: 4px;
+      background-color: #222;
+      color: #fff;
     }
-    input[type="submit"] {
-      background-color: #d4af37;
+    .btn {
+      background: #d4af37;
       color: #000;
-      font-weight: bold;
+      padding: 0.7rem 1.2rem;
+      border: none;
       cursor: pointer;
+      border-radius: 4px;
       margin-top: 1rem;
     }
-    input[type="submit"]:hover {
-      background-color: #b9972c;
+    .btn:hover {
+      background: #b9972c;
     }
-    a {
-      color: #d4af37;
-      text-decoration: none;
-      display: block;
-      margin-top: 1rem;
+    footer {
       text-align: center;
+      padding: 1rem;
+      background-color: #111;
+      color: #777;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-  <header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="section">
     <h1>Contactez-moi</h1>
-    <a href="index.html">← Retour à l'accueil</a>
-  </header>
+    <form action="https://formsubmit.co/ton.email@example.com" method="POST">
+      <input type="text" name="nom" placeholder="Votre nom" required />
+      <input type="email" name="email" placeholder="Votre adresse email" required />
+      <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+      <button type="submit" class="btn">Envoyer</button>
+    </form>
+    <p style="margin-top: 1rem;">ou contactez-moi directement sur <a href="https://wa.me/243976416666" style="color: #d4af37;" target="_blank">WhatsApp</a></p>
+  </section>
 
-  <form action="https://formspree.io/f/xwpbygoz" method="POST">
-    <label for="name">Nom :</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">Email :</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="message">Message :</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
-
-    <input type="submit" value="Envoyer">
-  </form>
+  <footer>
+    Contact : ton.email@example.com | WhatsApp : +243 976 416 666
+  </footer>
 </body>
 </html>
