@@ -3,71 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>À propos - Formations DAO & CAO</title>
+  <title>À propos - Aser Academy</title>
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
+      margin: 0; font-family: Arial, sans-serif; background: #000; color: #fff; line-height: 1.6;
     }
-    nav {
-      background-color: #111;
-      padding: 1rem;
-      text-align: center;
+    header, footer {
+      background: #111; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 2px 5px rgba(212,175,55,0.3);
+      position: sticky; top: 0; z-index: 1000;
     }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    nav li {
-      display: inline-block;
-      margin: 0 1rem;
-    }
+    header img { height: 50px; }
     nav a {
-      color: #d4af37;
-      text-decoration: none;
-      font-weight: bold;
+      margin-left: 1.5rem; font-weight: bold; font-size: 1rem; color: #d4af37; text-decoration: none;
+      transition: color 0.3s ease;
     }
-    nav a:hover {
-      text-decoration: underline;
+    nav a:hover { color: #b9972c; }
+    main {
+      max-width: 900px; margin: 2rem auto; padding: 0 1rem; animation: fadeIn 1s ease forwards;
     }
-    .section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
+    h1, h2 {
+      color: #d4af37; margin-bottom: 1rem;
     }
-    h1 {
-      color: #d4af37;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #111;
-      color: #777;
-      margin-top: 2rem;
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
     }
   </style>
 </head>
 <body>
+  <header>
+    <a href="index.html" aria-label="Accueil"><img src="logo.svg" alt="Logo Aser Academy" /></a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="programme.html">Programme</a>
+      <a href="temoignages.html">Témoignages</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section class="section">
-    <h1>À propos</h1>
-    <p>Je suis ingénieur passionné par la transmission du savoir dans les domaines de la DAO (Dessin Assisté par Ordinateur) et de la CAO (Conception Assistée par Ordinateur).</p>
-    <p>Je propose des formations pratiques et accessibles sur des logiciels comme AutoCAD, SketchUp et Robot Structural Analysis, pour étudiants, architectes, ingénieurs et passionnés de construction.</p>
-  </section>
+  <main>
+    <h1>À propos de Aser Academy</h1>
+    <p>Aser Academy est une plateforme dédiée à la formation professionnelle en DAO (Dessin Assisté par Ordinateur) et CAO (Conception Assistée par Ordinateur).</p>
+    <p>Notre formateur principal est un ingénieur expérimenté en AutoCAD, SketchUp et Robot Structural Analysis, prêt à vous accompagner dans votre montée en compétences.</p>
+  </main>
 
   <footer>
-    Contact : ton.email@example.com | WhatsApp : +243 976 416 666
+    Contact : <a href="mailto:ton.email@example.com">ton.email@example.com</a> | WhatsApp : <a href="https://wa.me/243976416666" target="_blank" rel="noopener noreferrer">+243 976 416 666</a>
   </footer>
 </body>
 </html>
