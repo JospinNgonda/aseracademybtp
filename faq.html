@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ - Aser Academy</title>
+  <style>
+    body {
+      margin: 0; font-family: Arial, sans-serif; background: #000; color: #fff; line-height: 1.6;
+    }
+    header, footer {
+      background: #111; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 2px 5px rgba(212,175,55,0.3);
+      position: sticky; top: 0; z-index: 1000;
+    }
+    header img { height: 50px; }
+    nav a {
+      margin-left: 1.5rem; font-weight: bold; font-size: 1rem; color: #d4af37; text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    nav a:hover { color: #b9972c; }
+    main {
+      max-width: 900px; margin: 2rem auto; padding: 0 1rem; animation: fadeIn 1s ease forwards;
+    }
+    h1, h2 {
+      color: #d4af37; margin-bottom: 1rem;
+    }
+    details {
+      background: #111;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      box-shadow: 0 0 8px rgba(212,175,55,0.2);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #d4af37;
+      font-size: 1.1rem;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" aria-label="Accueil"><img src="logo.svg" alt="Logo Aser Academy" /></a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="programme.html">Programme</a>
+      <a href="temoignages.html">Témoignages</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>FAQ - Questions fréquentes</h1>
+
+    <details>
+      <summary>Comment s'inscrire aux formations ?</summary>
+      <p>Utilisez le formulaire de contact ou contactez-nous directement via WhatsApp.</p>
+    </details>
+
+    <details>
+      <summary>Quels sont les prérequis pour suivre les formations ?</summary>
+      <p>Avoir un ordinateur avec les logiciels requis et une connexion internet stable.</p>
+    </details>
+
+    <details>
+      <summary>Recevrai-je une attestation de formation ?</summary>
+      <p>Oui, une attestation est remise à la fin de chaque formation.</p>
+    </details>
+
+  </main>
+
+  <footer>
+    Contact : <a href="mailto:ton.email@example.com">ton.email@example.com</a> | WhatsApp : <a href="https://wa.me/243976416666" target="_blank" rel="noopener noreferrer">+243 976 416 666</a>
+  </footer>
+</body>
+</html>
